@@ -25,7 +25,7 @@
     
     [self orderArray];
     
-    [self divededArray];
+    [self dividedArray];
     
     
 }
@@ -76,7 +76,7 @@
     
 }
 
--(void) divededArray{
+-(void) dividedArray{
     NSMutableArray *firstName = [[NSMutableArray alloc]init];
     NSMutableArray *lastName = [[NSMutableArray alloc]init];
     
