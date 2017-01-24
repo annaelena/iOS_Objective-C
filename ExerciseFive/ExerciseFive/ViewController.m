@@ -54,12 +54,12 @@
     [arrayName addObject:@"Glenn Horton"];
     [arrayName addObject:@"Francis Mack"];
     [arrayName addObject:@"Yvette Farmer"];
-    [arrayName addObject:@"Evan	Hughes"];
+    [arrayName addObject:@"Evan Hughes"];
     [arrayName addObject:@"Shelley Lane"];
     [arrayName addObject:@"Gladys Carroll"];
     [arrayName addObject:@"Stella Thornton"];
     [arrayName addObject:@"Mindy Wilkerson"];
-    [arrayName addObject:@"Beth	Diaz"];
+    [arrayName addObject:@"Beth Diaz"];
     [arrayName addObject:@"Everett Mckinney"];
     [arrayName addObject:@"Audrey Cooper"];
     [arrayName addObject:@"Christie Sutton"];
