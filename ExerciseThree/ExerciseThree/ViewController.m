@@ -7,10 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "ListAnswersTableViewController.h"
+
+#define RESULT @"result"
+#define DATE @"date"
 
 @interface ViewController (){
     int number ;
     bool numberEven;
+    
+    
     
 }
 
@@ -24,9 +30,11 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    [self newNumber];
     
-    
-    
+}
+
+-(void) newNumber {
     number = [self getRandomNumberBetween:0 to:1000];
     if (number%2 ==0) {
         numberEven = true;
@@ -49,6 +57,7 @@
     }];
     [alertViewController addAction:okAction];
     [self presentViewController:alertViewController animated:true completion:nil];
+    [self saveResult:answer];
     
 
 }
@@ -64,7 +73,9 @@
     }else{
         [self showAlert:@"Errato!"];
     }
-    }
+    
+    [self newNumber];
+}
 
 -(IBAction)buttonNoPressed:(id)sender{
     if(!numberEven){
@@ -73,6 +84,46 @@
         [self showAlert:@"Errato!"];
     }
     
+    [self newNumber];
+}
+
+
+
+-(void) saveResult:(NSString *) risposta{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd//hh:mm:ss"];
+    
+    NSDictionary *dictionary = @{DATE: [dateFormatter stringFromDate:[NSDate date]], RESULT: risposta};
+    
+    NSMutableArray *result = [self getRisposte];
+    
+    [result addObject:dictionary];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:result forKey:RESULT];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
+
+
+// questo metodo mi ritorna l'array salvato in memoria!!!
+-(NSArray *)getRisposte{
+    NSMutableArray *result = [[[NSUserDefaults standardUserDefaults] objectForKey:RESULT]mutableCopy];
+    
+    if( result == nil){
+        //creato l'array delle risposte vuoto.
+        result = [[NSMutableArray alloc] init];
+    }
+
+    return result;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    ListAnswersTableViewController *list = segue.destinationViewController;
+    
+    [list setRiposta:[self getRisposte]];
 }
 
 

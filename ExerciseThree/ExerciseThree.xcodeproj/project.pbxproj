@@ -13,6 +13,7 @@
 		560ACF3C1E37579B00240A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560ACF3A1E37579B00240A5A /* Main.storyboard */; };
 		560ACF3E1E37579B00240A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560ACF3D1E37579B00240A5A /* Assets.xcassets */; };
 		560ACF411E37579B00240A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560ACF3F1E37579B00240A5A /* LaunchScreen.storyboard */; };
+		56F50C2A1E4CB10400AF1BDB /* ListAnswersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F50C291E4CB10400AF1BDB /* ListAnswersTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		560ACF3D1E37579B00240A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		560ACF401E37579B00240A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		560ACF421E37579B00240A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F50C281E4CB10400AF1BDB /* ListAnswersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListAnswersTableViewController.h; sourceTree = "<group>"; };
+		56F50C291E4CB10400AF1BDB /* ListAnswersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListAnswersTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				560ACF351E37579B00240A5A /* AppDelegate.m */,
 				560ACF371E37579B00240A5A /* ViewController.h */,
 				560ACF381E37579B00240A5A /* ViewController.m */,
+				56F50C281E4CB10400AF1BDB /* ListAnswersTableViewController.h */,
+				56F50C291E4CB10400AF1BDB /* ListAnswersTableViewController.m */,
 				560ACF3A1E37579B00240A5A /* Main.storyboard */,
 				560ACF3D1E37579B00240A5A /* Assets.xcassets */,
 				560ACF3F1E37579B00240A5A /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 			files = (
 				560ACF391E37579B00240A5A /* ViewController.m in Sources */,
 				560ACF361E37579B00240A5A /* AppDelegate.m in Sources */,
+				56F50C2A1E4CB10400AF1BDB /* ListAnswersTableViewController.m in Sources */,
 				560ACF331E37579B00240A5A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +313,7 @@
 				560ACF471E37579B00240A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
